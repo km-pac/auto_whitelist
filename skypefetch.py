@@ -26,7 +26,7 @@ chat_name = "GRP DEV - NA"
 options = Options()
 
 options.add_experimental_option("detach", True)
-# options.add_argument("--window-position=-10000,0")
+options.add_argument("--window-position=-10000,0")
 options.add_argument("--start-maximized")
 
 driver = webdriver.Chrome(service = Service(ChromeDriverManager().install()), 

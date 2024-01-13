@@ -13,6 +13,7 @@ now_time = datetime.now().time()
 
 input_skype_user_pass(username)
 while(1):
+    
     mod_address_arr = []
     [users, addresses] = fetch_data_chat(count)
     
@@ -40,7 +41,7 @@ while(1):
                         # Setup the message that will be sent
                         greeting = "morning" if now_time <= time(12, 0) else "afternoon"
                         gender = "Sir" if user.lower() not in female_devs else "Ma'am"            
-                        message = f"Good {greeting}, {user}, kindly try {gender}"
+                        message = f"Good {greeting} {user}, kindly try {gender}"
                         
                         # Sends the message per user
                         text_input = WebDriverWait(driver, 100).until(EC.presence_of_element_located((By.XPATH, input_bar_xpath)))
